@@ -1,0 +1,80 @@
+window#waybar {
+    background-color: transparent;
+    font-family: "Overpass Mono Light", sans-serif;;
+    color: aqua;
+    font-size: 13px;
+}
+#workspaces button.active {
+    color: aqua; 
+}
+#workspaces button {
+    transition: color 0.5s ease;
+}
+
+
+.modules-right > widget > label,
+.modules-left > widget > label,
+.modules-center > widget > label {
+    margin: 0 3px; 
+    padding: 1px 5px 0px 5px; 
+    border-radius: 4px 0px 4px 0px;
+    background-color: transparent; 
+    min-height: 0px;
+    
+    /* DEFAULT STATE: 
+       Border & Text = 50% Transparent Aqua */
+    border: 2px solid rgba(0, 255, 255, 0.5); 
+    color: rgba(0, 255, 255, 0.5);
+    
+    /* Smooth fade for both border and text */
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+
+.modules-right > widget > label:hover,
+.modules-left > widget > label:hover,
+.modules-center > widget > label:hover {
+    border-color: #00FFFF;
+    color: #00FFFF;
+}
+
+
+#pulseaudio {
+    border-color: rgba(96, 125, 139, 0.5); 
+    color: rgba(96, 125, 139, 0.5);
+}
+#pulseaudio:hover {
+    border-color: #607d8b; 
+    color: #607d8b;
+}
+
+/* Battery: Green */
+#battery {
+    border-color: rgba(166, 209, 137, 0.5); 
+    color: rgba(166, 209, 137, 0.5);
+}
+#battery:hover {
+    border-color: #a6d189; 
+    color: #a6d189;
+}
+
+/* Battery Warning/Critical */
+#battery.warning {
+    border-color: rgba(229, 200, 144, 0.5);
+    color: rgba(229, 200, 144, 0.5);
+}
+#battery.warning:hover {
+    border-color: #e5c890;
+    color: #e5c890;
+}
+
+#battery.critical {
+    border-color: rgba(231, 130, 132, 0.5);
+    background-color: rgba(231, 130, 132, 0.5); 
+    color: #ffffff; /* Keep white text for critical readability */
+}
+#battery.critical:hover {
+    border-color: #e78284;
+    background-color: #e78284;
+    color: #ffffff;
+}
